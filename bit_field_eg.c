@@ -8,14 +8,15 @@ struct sample
 
 typedef struct sample Sample;
 
-int main ()
+int main (void)
 {
-  Sample.data = 2;//works as 2 is in the range of mentioned bit field
-  printf("%d\n",Sample.data);
+	Sample test;
+  	test.data = 2;//works as 2 is in the range of mentioned bit field
+  	printf("%d\n",test.data);
   
-  Sample.data = 4;//would give 2s complement as it is out of range
-  printf("%d\n",Sample.data);
+  	test.data = 4;//would give 2s complement as it is out of range
+  	printf("%d\n",test.data);
   
-  return 0;
- }
+  	return 0;
+}
   
